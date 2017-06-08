@@ -15,7 +15,7 @@ session_start();
     <form action="login.php" method="post" login-form">
       <input type="text" name="username" placeholder="U s e r n a m e"/>
       <input type="password" name="password" placeholder="P a s s w o r d"/>
-      <button>login</button>
+      <button name="button2">login</button>
     </form>
   </div>
 </div>
