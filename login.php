@@ -1,4 +1,7 @@
 <?php
+//Startar en session så uppgifterna ska sparas tills sidan stängs ner.
+session_start();
+
 //använder "include" för att inkludera min connect.php. Alltså min connection till databasen.
 include 'connect.php';
 
@@ -17,6 +20,9 @@ $result = mysqli_query($conn, $sql);
 if (!$row = mysqli_fetch_assoc($result)) {
  	header("Location:loginfail.php");
  } else {
+ 	//sparar rätt username och pw för inlogg i $_SESSION[username/password]
+ 	$_SESSION['username'] = $row['username'];
+ 	$_SESSION['password'] = $row['password'];
  	header("Location:loggedin.php");
  }
 ?>
