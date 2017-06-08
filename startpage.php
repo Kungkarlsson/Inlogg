@@ -6,6 +6,8 @@
 </head>
 <body>
 <?php
+session_start();
+//session_start() för att ha igång min session.
 //Skapar min startsida, min login-form. Post-method för att kunna skicka infon. Har också addat "link" till stylesheet för att fixa designen.
 ?>
 <div class="login-page">
