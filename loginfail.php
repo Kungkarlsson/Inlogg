@@ -6,6 +6,8 @@
 </head>
 <body>
 <?php
+session_start();
+//session_start() för att ha igång min session.
 //En sida ifall man skriver in fel uppgifter bara för snygghetens skull. Använder samma css som vid loginform.
 ?>
 <div class="login-page">
