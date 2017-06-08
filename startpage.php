@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-//Skapar min startsida, min login-form. Post-method för att kunna skicka info till min databas. Har också addat "link" till stylesheet för att fixa designen.
+//Skapar min startsida, min login-form. Post-method för att kunna skicka infon. Har också addat "link" till stylesheet för att fixa designen.
 ?>
 <div class="login-page">
   <div class="form">
@@ -17,6 +17,5 @@
     </form>
   </div>
 </div>
-
 </body>
 </html>
