@@ -5,9 +5,9 @@ session_start();
 //använder "include" för att inkludera min connect.php. Alltså min connection till databasen.
 include 'connect.php';
 
-//Sätter två varibler ($username, $password) till att vara vad använderna skriver in i loginformen mha POST.
-$username = $_POST['username'];
-$password = $_POST['password'];
+//Sätter två varibler ($username, $password) till att vara vad använderna skriver in i loginformen mha POST. Och använder FILTER_SANITIZE för att hindra sql script attacker. Tar bort möjligheten att skriva konstiga tecken i sökfältet.
+$username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS);
+$password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_SPECIAL_CHARS);
 
 //Sätter en variabel ($sql) mha att använda SELECT kommando på mitt table "persons" för att få ut användarna. 
 $sql = "SELECT * FROM persons WHERE username = '$username' AND password = '$password'";
