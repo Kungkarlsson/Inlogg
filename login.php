@@ -15,8 +15,8 @@ $result = mysqli_query($conn, $sql);
 //kör mysqli_fetch_assoc för att få ett resultat som en array av en row i databasen och sätter det till $row. och jämnför med $result.
 //om $row skiljer sig från $result är det fel lösenord och felmeddelande skickas. annars "your logged in"
 if (!$row = mysqli_fetch_assoc($result)) {
- 	echo "Your username or password is incorrect!";
+ 	header("Location:loginfail.php");
  } else {
- 	echo "Your logged in!";
+ 	header("Location:loggedin.php");
  }
 ?>
